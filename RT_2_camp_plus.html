@@ -14,8 +14,11 @@
 
       /* MEDIA QUERY : TABLET */
       @media (min-width: 600px) {
-        .root {
+        .root,
+        .footer,
+        .greeting {
           font-size: 16px !important;
+          line-height: 20px !important;
         }
 
         .bold-font {
@@ -41,6 +44,19 @@
           padding-bottom: 28px !important;
         }
 
+        .card-header {
+          padding: 12px 20px !important;
+        }
+
+        .card-main {
+          padding: 16px 20px !important;
+        }
+        .card-button {
+          padding: 0 20px 16px 20px !important;
+        }
+        .card-row-spacer {
+          height: 16px !important;
+        }
         .workspace-project-pill {
           padding: 25px 0 15px 0 !important  ;
         }
@@ -260,7 +276,10 @@
                   >
                     <!-- CARD HEADER -->
                     <tr>
-                      <td style="background-color: #eaf6ff; padding: 8px 14px">
+                      <td
+                        class="card-header"
+                        style="background-color: #eaf6ff; padding: 8px 14px"
+                      >
                         <table width="100%" style="border-spacing: 0">
                           <tr>
                             <!-- Left: Icon + Title -->
@@ -371,7 +390,10 @@
                     </tr>
                     <!-- CARD MAIN  -->
                     <tr>
-                      <td style="vertical-align: top; padding: 8px 14px">
+                      <td
+                        class="card-main"
+                        style="vertical-align: top; padding: 8px 14px"
+                      >
                         <table
                           width="100%"
                           cellpadding="0"
@@ -391,6 +413,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -402,12 +425,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">12 Keywords</strong>
                               Claimed the
@@ -418,7 +437,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -434,6 +457,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -445,12 +469,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">8 Keywords</strong>
                               moved into the
@@ -459,7 +479,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -475,6 +499,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -486,10 +511,10 @@
                               </table>
                             </td>
                             <td
+                              class="card-content-row"
                               style="
                                 padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
+
                                 color: #000;
                               "
                             >
@@ -500,7 +525,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -516,6 +545,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -527,10 +557,10 @@
                               </table>
                             </td>
                             <td
+                              class="card-content-row"
                               style="
                                 padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
+
                                 color: #000;
                               "
                             >
@@ -542,7 +572,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -558,6 +592,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -569,10 +604,10 @@
                               </table>
                             </td>
                             <td
+                              class="card-content-row"
                               style="
                                 padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
+
                                 color: #000;
                               "
                             >
@@ -588,7 +623,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -604,6 +643,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -615,12 +655,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               Your
                               <strong class="bold-font">Share of Voice</strong>
@@ -635,7 +671,11 @@
                     </tr>
                     <!-- BUTTON -->
                     <tr>
-                      <td align="center" style="padding: 0 14px 15px 14px">
+                      <td
+                        class="card-button"
+                        align="center"
+                        style="padding: 0 14px 15px 14px"
+                      >
                         <table
                           cellpadding="0"
                           cellspacing="0"
@@ -694,7 +734,10 @@
                   >
                     <!-- CARD HEADER -->
                     <tr>
-                      <td style="background-color: #eaf6ff; padding: 8px 14px">
+                      <td
+                        class="card-header"
+                        style="background-color: #eaf6ff; padding: 8px 14px"
+                      >
                         <table width="100%" style="border-spacing: 0">
                           <tr>
                             <!-- Left: Icon + Title -->
@@ -805,7 +848,10 @@
                     </tr>
                     <!-- CARD MAIN  -->
                     <tr>
-                      <td style="vertical-align: top; padding: 8px 14px">
+                      <td
+                        class="card-main"
+                        style="vertical-align: top; padding: 8px 14px"
+                      >
                         <table
                           width="100%"
                           cellpadding="0"
@@ -825,6 +871,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -836,12 +883,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">12 Keywords</strong>
                               Claimed the
@@ -852,7 +895,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -868,6 +915,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -893,7 +941,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -909,6 +961,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -920,12 +973,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">5 Keywords</strong>
                               moved into the
@@ -934,7 +983,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -950,6 +1003,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -961,12 +1015,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">3 Keywords</strong>
                               <strong style="color: #43a047"
@@ -976,7 +1026,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -992,6 +1046,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -1003,12 +1058,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               <strong class="bold-font">10 Keywords</strong>
                               have maintained the
@@ -1022,7 +1073,11 @@
                           </tr>
                           <!-- Spacer after each row -->
                           <tr>
-                            <td colspan="2" height="10"></td>
+                            <td
+                              class="card-row-spacer"
+                              colspan="2"
+                              height="10"
+                            ></td>
                           </tr>
 
                           <!-- CARD CONTENT ROW -->
@@ -1038,6 +1093,7 @@
                               <table cellpadding="0" cellspacing="0" border="0">
                                 <tr>
                                   <td
+                                    class="bullet-dot"
                                     style="
                                       background-color: #000;
                                       width: 6px;
@@ -1049,12 +1105,8 @@
                               </table>
                             </td>
                             <td
-                              style="
-                                padding-left: 5px;
-                                font-size: 14px;
-                                line-height: 20px;
-                                color: #000;
-                              "
+                              class="card-content-row"
+                              style="padding-left: 5px; color: #000"
                             >
                               Your
                               <strong class="bold-font">Share of Voice</strong>
@@ -1069,7 +1121,11 @@
                     </tr>
                     <!-- BUTTON -->
                     <tr>
-                      <td align="center" style="padding: 0 14px 15px 14px">
+                      <td
+                        class="card-button"
+                        align="center"
+                        style="padding: 0 14px 15px 14px"
+                      >
                         <table
                           cellpadding="0"
                           cellspacing="0"
@@ -1209,7 +1265,7 @@
 
               <!-- GREETING -->
               <tr>
-                <td style="line-height: 20px">
+                <td class="greeting" style="line-height: 20px">
                   Best,<br />The Infigrowth Team
                 </td>
               </tr>
