@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* 🛠️ MEDIA QUERY: Desktop layout - pills side by side */
+      /* 🛠️ Mobile view spacing */
+      .pill-mobile {
+        padding-bottom: 10px;
+      }
+
+      /* Overview card header */
+
+      /* MEDIA QUERY : TABLET */
       @media (min-width: 600px) {
+        /* ROOT */
+        .root {
+          font-size: 16px !important;
+        }
+
+        /* logo */
+        .main-logo {
+          /* background-color: red; */
+          padding: 25px 25px 15px 25px !important;
+        }
+
+        .main-logo img {
+          width: 220px;
+          height: 50px;
+        }
+
         .pill-row {
-          border: "1px solid red";
           display: table;
           /* width: 100%; */
         }
@@ -23,18 +45,21 @@
         .pill-col:last-child {
           padding-right: 0;
         }
-      }
-
-      /* 🛠️ Mobile view spacing */
-      .pill-mobile {
-        padding-bottom: 10px;
-      }
-
-      @media (min-width: 600px) {
         .pill-mobile {
           padding-bottom: 0 !important;
         }
+
+        /* Overview card header */
+        .overview-left,
+        .overview-right {
+          display: table-cell !important;
+          width: 25% !important;
+          vertical-align: middle !important;
+          padding-bottom: 0 !important;
+        }
       }
+
+      /* MEDIA QUERY : DESKTOP */
     </style>
   </head>
   <body>
@@ -45,7 +70,7 @@
           font-size: 14px;
           width: 100%;
           max-width: 800px;
-          border: 1px solid red;
+          border: 2px solid #eaf6ff;
           border-radius: 10px;
           font-family: Verdana, Geneva, sans-serif;
           border-spacing: 0;
@@ -54,7 +79,7 @@
       >
         <!-- LOGO -->
         <tr>
-          <td style="padding: 10px 10px 5px 10px">
+          <td class="main-logo" style="padding: 10px 10px 5px 10px">
             <img
               src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744284824/IG_COLOR_WHITE_BG_V2_2x_1_kr2bvv.webp"
               width="180px"
@@ -67,6 +92,7 @@
         <tr style="background-color: #eaf6ff">
           <td style="height: 200px; padding: 10px">
             <p
+              class="bold-font"
               style="
                 text-align: center;
                 font-size: 16px;
@@ -90,13 +116,15 @@
         <tr>
           <td
             class="main"
-            style="border: 2px solid blue; padding: 10px; vertical-align: top"
+            style="padding: 25px 10px 15px 10px; vertical-align: top"
           >
             <table style="width: 100%; border-spacing: 0">
               <!-- CONTENT -->
               <tr>
                 <td>
-                  <p style="margin: 0">Hi <strong>Robin Fernandes,</strong></p>
+                  <p style="margin: 0">
+                    Hi <strong class="bold-font">Robin Fernandes,</strong>
+                  </p>
                   <p style="margin: 10px 0 0 0">
                     Your ranking alerts have been triggered based on your
                     keyword performance. Review the details below to stay
@@ -107,14 +135,21 @@
 
               <!-- PILL ROW -->
               <tr>
-                <td style="padding: 10px 0">
+                <td style="padding: 20px 0">
                   <!-- 🛠️ DESKTOP SIDE-BY-SIDE -->
                   <div class="pill-row">
                     <div class="pill-col" style="padding-bottom: 5px">
-                      <table width="100%" cellpadding="0" cellspacing="0">
+                      <table
+                        style="border-spacing: 0"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
                         <tr>
                           <td>
-                            <span style="font-weight: 600">Workspace :</span>
+                            <span class="bold-font" style="font-weight: 600"
+                              >Workspace :</span
+                            >
                             <span
                               style="
                                 display: inline-block;
@@ -131,10 +166,17 @@
                       </table>
                     </div>
                     <div class="pill-col">
-                      <table width="100%" cellpadding="0" cellspacing="0">
+                      <table
+                        style="border-spacing: 0"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
                         <tr>
                           <td>
-                            <span style="font-weight: 600">Project :</span>
+                            <span class="bold-font" style="font-weight: 600"
+                              >Project :</span
+                            >
                             <!-- 📌 Updated pill span -->
                             <span
                               style="
@@ -146,7 +188,12 @@
                               "
                             >
                               <!-- 🆕 Created inner table for icon and text -->
-                              <table cellpadding="0" cellspacing="0" border="0">
+                              <table
+                                style="border-spacing: 0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                              >
                                 <tr>
                                   <td
                                     style="
@@ -174,8 +221,1006 @@
                   </div>
                 </td>
               </tr>
-              <!-- END PILLS -->
+
+              <!-- OVERVIEW CARD -->
+              <tr>
+                <td style="padding-bottom: 20px">
+                  <table
+                    style="
+                      border: 2px solid #eaf6ff;
+                      border-radius: 12px;
+                      overflow: hidden;
+                      border-spacing: 0;
+                      width: 100%;
+                    "
+                  >
+                    <!-- CARD HEADER -->
+                    <tr>
+                      <td style="background-color: #eaf6ff; padding: 8px 14px">
+                        <table width="100%" style="border-spacing: 0">
+                          <tr>
+                            <!-- Left: Icon + Title -->
+                            <td
+                              style="
+                                width: 100%;
+                                display: block;
+                                padding-bottom: 10px;
+                              "
+                              class="overview-left"
+                            >
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="border-spacing: 0"
+                              >
+                                <tr>
+                                  <td
+                                    style="
+                                      padding-right: 5px;
+                                      vertical-align: middle;
+                                    "
+                                  >
+                                    <img
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744366015/flashlight-line_x28ru5.png"
+                                      width="20"
+                                      height="20"
+                                      style="display: inline-block"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="
+                                      font-weight: 600;
+                                      font-size: 16px;
+                                      color: #000;
+                                      vertical-align: middle;
+                                      white-space: nowrap;
+                                    "
+                                  >
+                                    Overview of Alerts for Campaign :
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+
+                            <!-- Right: Pill -->
+                            <td
+                              style="width: 100%; display: block"
+                              class="overview-right"
+                            >
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="
+                                  display: inline-block;
+                                  border: 1px solid;
+                                  border-radius: 4px;
+                                  background-color: #fff;
+                                  padding: 6px 10px;
+                                "
+                              >
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/google_1_1_s5svny.png"
+                                    />
+                                  </td>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      height="18px"
+                                      width="21px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/Flag_hdseof.png"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="
+                                      padding-right: 5px;
+                                      border-right: 1px solid #e2e8f0;
+                                      font-weight: 600;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    India
+                                  </td>
+                                  <td style="padding: 0 5px">
+                                    <img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/FirstAddon_1_ljd1fz.png"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="font-weight: 600; font-size: 14px"
+                                  >
+                                    Desktop
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- CARD MAIN  -->
+                    <tr>
+                      <td style="vertical-align: top; padding: 8px 14px">
+                        <table
+                          width="100%"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                        >
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">12 Keywords</strong>
+                              Claimed the
+                              <strong style="color: #43a047"
+                                >1st position</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">8 Keywords</strong>
+                              moved into the
+                              <strong style="color: #43a047">Top 3</strong>
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">5 Keywords</strong>
+                              moved into the
+                              <strong style="color: #43a047">Top 10</strong>
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">3 Keywords</strong>
+                              <strong style="color: #43a047"
+                                >secured a Featured Snippet</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">10 Keywords</strong>
+                              have maintained the
+                              <strong style="color: #43a047"
+                                >1st position</strong
+                              >for over
+                              <strong style="color: #43a047"
+                                >multiple weeks.</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              Your
+                              <strong class="bold-font">Share of Voice</strong>
+                              increased by
+                              <strong style="color: #43a047">12%</strong>,
+                              surpassing Competitor XYZ.
+                            </td>
+                          </tr>
+                          <!-- OVER-VIEW CARD BUTTON -->
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- BUTTON -->
+                    <tr>
+                      <td align="center" style="padding: 0 14px 15px 14px">
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          style="
+                            border-radius: 6px;
+                            overflow: hidden;
+                            width: 100%;
+                          "
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              bgcolor="#039BE5"
+                              style="
+                                padding: 12px 24px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: Arial, sans-serif;
+                                color: #ffffff;
+                                text-decoration: none;
+                                border-radius: 6px;
+                              "
+                            >
+                              <a
+                                href="https://your-link.com"
+                                target="_blank"
+                                style="
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  display: inline-block;
+                                "
+                              >
+                                Review Your Rankings Now
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- OVERVIEW CARD -->
+              <tr>
+                <td style="padding-bottom: 20px">
+                  <table
+                    style="
+                      border: 2px solid #eaf6ff;
+                      border-radius: 12px;
+                      overflow: hidden;
+                      border-spacing: 0;
+                      width: 100%;
+                    "
+                  >
+                    <!-- CARD HEADER -->
+                    <tr>
+                      <td style="background-color: #eaf6ff; padding: 8px 14px">
+                        <table width="100%" style="border-spacing: 0">
+                          <tr>
+                            <!-- Left: Icon + Title -->
+                            <td
+                              style="
+                                width: 100%;
+                                display: block;
+                                padding-bottom: 10px;
+                              "
+                              class="overview-left"
+                            >
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="border-spacing: 0"
+                              >
+                                <tr>
+                                  <td
+                                    style="
+                                      padding-right: 5px;
+                                      vertical-align: middle;
+                                    "
+                                  >
+                                    <img
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744366015/flashlight-line_x28ru5.png"
+                                      width="20"
+                                      height="20"
+                                      style="display: inline-block"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="
+                                      font-weight: 600;
+                                      font-size: 16px;
+                                      color: #000;
+                                      vertical-align: middle;
+                                      white-space: nowrap;
+                                    "
+                                  >
+                                    Overview of Alerts for Campaign :
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+
+                            <!-- Right: Pill -->
+                            <td
+                              style="width: 100%; display: block"
+                              class="overview-right"
+                            >
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                style="
+                                  display: inline-block;
+                                  border: 1px solid;
+                                  border-radius: 4px;
+                                  background-color: #fff;
+                                  padding: 6px 10px;
+                                "
+                              >
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/google_1_1_s5svny.png"
+                                    />
+                                  </td>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      height="18px"
+                                      width="21px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/Flag_hdseof.png"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="
+                                      padding-right: 5px;
+                                      border-right: 1px solid #e2e8f0;
+                                      font-weight: 600;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    India
+                                  </td>
+                                  <td style="padding: 0 5px">
+                                    <img
+                                      height="20px"
+                                      width="20px"
+                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/FirstAddon_1_ljd1fz.png"
+                                    />
+                                  </td>
+                                  <td
+                                    class="bold-font"
+                                    style="font-weight: 600; font-size: 14px"
+                                  >
+                                    Desktop
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- CARD MAIN  -->
+                    <tr>
+                      <td style="vertical-align: top; padding: 8px 14px">
+                        <table
+                          width="100%"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                        >
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">12 Keywords</strong>
+                              Claimed the
+                              <strong style="color: #43a047"
+                                >1st position</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">8 Keywords</strong>
+                              moved into the
+                              <strong style="color: #43a047">Top 3</strong>
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">5 Keywords</strong>
+                              moved into the
+                              <strong style="color: #43a047">Top 10</strong>
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">3 Keywords</strong>
+                              <strong style="color: #43a047"
+                                >secured a Featured Snippet</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              <strong class="bold-font">10 Keywords</strong>
+                              have maintained the
+                              <strong style="color: #43a047"
+                                >1st position</strong
+                              >for over
+                              <strong style="color: #43a047"
+                                >multiple weeks.</strong
+                              >
+                            </td>
+                          </tr>
+                          <!-- Spacer after each row -->
+                          <tr>
+                            <td colspan="2" height="10"></td>
+                          </tr>
+
+                          <!-- CARD CONTENT ROW -->
+                          <tr>
+                            <td
+                              style="
+                                vertical-align: middle;
+                                width: 10px;
+                                padding-top: 2px;
+                              "
+                            >
+                              <!-- Bullet Dot -->
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      background-color: #000;
+                                      width: 6px;
+                                      height: 6px;
+                                      border-radius: 50%;
+                                    "
+                                  ></td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              style="
+                                padding-left: 5px;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #000;
+                              "
+                            >
+                              Your
+                              <strong class="bold-font">Share of Voice</strong>
+                              increased by
+                              <strong style="color: #43a047">12%</strong>,
+                              surpassing Competitor XYZ.
+                            </td>
+                          </tr>
+                          <!-- OVER-VIEW CARD BUTTON -->
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- BUTTON -->
+                    <tr>
+                      <td align="center" style="padding: 0 14px 15px 14px">
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          style="
+                            border-radius: 6px;
+                            overflow: hidden;
+                            width: 100%;
+                          "
+                        >
+                          <tr>
+                            <td
+                              align="center"
+                              bgcolor="#039BE5"
+                              style="
+                                padding: 12px 24px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: Arial, sans-serif;
+                                color: #ffffff;
+                                text-decoration: none;
+                                border-radius: 6px;
+                              "
+                            >
+                              <a
+                                href="https://your-link.com"
+                                target="_blank"
+                                style="
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  display: inline-block;
+                                "
+                              >
+                                Review Your Rankings Now
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- VIEW MORE CARD -->
+              <tr>
+                <td style="padding-bottom: 15px">
+                  <table
+                    style="
+                      border: 2px solid #8ecdff;
+                      width: 100%;
+                      padding: 10px;
+                      border-radius: 6px;
+                      background-color: #e9f7ff;
+                    "
+                  >
+                    <tr>
+                      <td style="vertical-align: top; width: 22px">
+                        <img
+                          src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744369412/error-warning-line_jpmi0h.png"
+                          alt=""
+                          height="20px"
+                          width="20px"
+                        />
+                      </td>
+                      <td>
+                        <table>
+                          <tr>
+                            <td
+                              class="bold-font"
+                              style="
+                                font-size: 16px;
+                                font-weight: 600;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              You Have More Alerts to Review
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="line-height: 18px; padding-bottom: 10px">
+                              We've surfaced some key alerts, but there are more
+                              critical ones need your attention. View All Alerts
+                              to stay fully informed.
+                            </td>
+                          </tr>
+
+                          <!-- VIEW MORE BUTTON -->
+                          <tr>
+                            <td align="center" style="padding: 0">
+                              <table
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="
+                                  border-radius: 6px;
+                                  overflow: hidden;
+                                  width: 100%;
+                                "
+                              >
+                                <tr>
+                                  <td
+                                    align="center"
+                                    bgcolor="#039BE5"
+                                    style="
+                                      padding: 12px 24px;
+                                      font-size: 16px;
+                                      font-weight: bold;
+                                      font-family: Arial, sans-serif;
+                                      color: #ffffff;
+                                      text-decoration: none;
+                                      border-radius: 6px;
+                                    "
+                                  >
+                                    <a
+                                      href="https://your-link.com"
+                                      target="_blank"
+                                      style="
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        display: inline-block;
+                                      "
+                                    >
+                                      Review All Alerts
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- GREETING -->
+              <tr>
+                <td style="line-height: 20px">
+                  Best,<br />The Infigrowth Team
+                </td>
+              </tr>
             </table>
+          </td>
+        </tr>
+
+        <!-- SUPPORT -->
+        <tr>
+          <td
+            class="bold-font"
+            style="
+              line-height: 20px;
+              background-color: #e9f7ff;
+              text-align: center;
+              padding: 15px 0;
+            "
+          >
+            Need more help?<br />
+            <a
+              href="mailto:support@infigrowth.com"
+              style="color: #000; font-weight: 600"
+              >support@infigrowth.com
+            </a>
+          </td>
+        </tr>
+        <!-- FOOTER -->
+        <tr>
+          <td style="padding: 10px 10px 20px 10px; line-height: 18px">
+            You are receiving this email as part of your Infigrowth account. We
+            strive to provide valuable insights, but if you’d like to make
+            changes, you can
+            <a class="bold-font" href="#" style="color: #000; font-weight: 600"
+              >Update your preferences anytime.</a
+            >
           </td>
         </tr>
       </table>
