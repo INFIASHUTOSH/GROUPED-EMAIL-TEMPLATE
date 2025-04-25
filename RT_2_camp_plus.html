@@ -31,6 +31,16 @@
           padding: 25px 25px 15px 25px !important;
         }
 
+        .main-logo img {
+          width: 220px;
+          height: 50px;
+        }
+
+        .banner img {
+          width: 150px;
+          height: 103px;
+        }
+
         .main {
           padding: 30px 50px 25px 50px !important;
         }
@@ -54,6 +64,13 @@
         .card-button {
           padding: 0 20px 16px 20px !important;
         }
+        .view-more-wrapper {
+          padding: 14px !important;
+        }
+        .view-more-subheading {
+          padding-bottom: 14px !important;
+        }
+
         .card-row-spacer {
           height: 16px !important;
         }
@@ -63,11 +80,6 @@
 
         .support {
           padding: 20px 0 !important;
-        }
-
-        .main-logo img {
-          width: 220px;
-          height: 50px;
         }
 
         .pill-row {
@@ -100,6 +112,65 @@
       }
 
       /* MEDIA QUERY : DESKTOP */
+      @media (min-width: 1100px) {
+        .root,
+        .footer,
+        .greeting,
+        .support {
+          line-height: 24px !important;
+        }
+
+        /* logo */
+        .main-logo {
+          /* background-color: red; */
+          padding: 32px 32px 21px 32px !important;
+        }
+
+        .main-logo img {
+          width: 280px;
+          height: 54px;
+        }
+
+        .banner {
+          height: 235px;
+        }
+
+        .main {
+          padding: 36px 56px 28px 56px !important;
+        }
+
+        .overview-card,
+        .view-more-card {
+          padding-bottom: 32px !important;
+        }
+
+        .card-header {
+          padding: 16px 24px !important;
+        }
+
+        .card-main {
+          padding: 16px 24px !important;
+        }
+
+        .card-button {
+          padding: 0 24px 16px 24px !important;
+        }
+        .view-more-wrapper {
+          padding: 16px !important;
+        }
+
+        .view-more-subheading {
+          padding-bottom: 16px !important;
+        }
+
+        .support {
+          padding: 24px 0 27px !important;
+        }
+
+        .footer {
+          padding: 16px 24px 32px 24px !important;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,7 +201,7 @@
 
         <!-- BANNER -->
         <tr style="background-color: #eaf6ff">
-          <td style="height: 200px; padding: 10px">
+          <td class="banner" style="height: 200px; padding: 10px">
             <p
               class="bold-font"
               style="
@@ -1174,6 +1245,7 @@
               <tr>
                 <td class="view-more-card" style="padding-bottom: 15px">
                   <table
+                    class="view-more-wrapper"
                     style="
                       border: 2px solid #8ecdff;
                       width: 100%;
@@ -1206,7 +1278,10 @@
                             </td>
                           </tr>
                           <tr>
-                            <td style="line-height: 18px; padding-bottom: 10px">
+                            <td
+                              class="view-more-subheading"
+                              style="line-height: 18px; padding-bottom: 10px"
+                            >
                               We've surfaced some key alerts, but there are more
                               critical ones need your attention. View All Alerts
                               to stay fully informed.
