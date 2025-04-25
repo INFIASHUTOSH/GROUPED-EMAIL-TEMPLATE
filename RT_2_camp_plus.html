@@ -14,15 +14,39 @@
 
       /* MEDIA QUERY : TABLET */
       @media (min-width: 600px) {
-        /* ROOT */
         .root {
           font-size: 16px !important;
+        }
+
+        .bold-font {
+          font-size: 18px !important;
         }
 
         /* logo */
         .main-logo {
           /* background-color: red; */
           padding: 25px 25px 15px 25px !important;
+        }
+
+        .main {
+          padding: 30px 50px 25px 50px !important;
+        }
+
+        .footer {
+          padding: 16px 24px 30px 25px !important;
+        }
+
+        .overview-card,
+        .view-more-card {
+          padding-bottom: 28px !important;
+        }
+
+        .workspace-project-pill {
+          padding: 25px 0 15px 0 !important  ;
+        }
+
+        .support {
+          padding: 20px 0 !important;
         }
 
         .main-logo img {
@@ -135,7 +159,7 @@
 
               <!-- PILL ROW -->
               <tr>
-                <td style="padding: 20px 0">
+                <td class="workspace-project-pill" style="padding: 20px 0">
                   <!-- 🛠️ DESKTOP SIDE-BY-SIDE -->
                   <div class="pill-row">
                     <div class="pill-col" style="padding-bottom: 5px">
@@ -224,7 +248,7 @@
 
               <!-- OVERVIEW CARD -->
               <tr>
-                <td style="padding-bottom: 20px">
+                <td class="overview-card" style="padding-bottom: 20px">
                   <table
                     style="
                       border: 2px solid #eaf6ff;
@@ -658,7 +682,7 @@
 
               <!-- OVERVIEW CARD -->
               <tr>
-                <td style="padding-bottom: 20px">
+                <td class="overview-card" style="padding-bottom: 20px">
                   <table
                     style="
                       border: 2px solid #eaf6ff;
@@ -1092,7 +1116,7 @@
 
               <!-- VIEW MORE CARD -->
               <tr>
-                <td style="padding-bottom: 15px">
+                <td class="view-more-card" style="padding-bottom: 15px">
                   <table
                     style="
                       border: 2px solid #8ecdff;
@@ -1196,7 +1220,7 @@
         <!-- SUPPORT -->
         <tr>
           <td
-            class="bold-font"
+            class="bold-font support"
             style="
               line-height: 20px;
               background-color: #e9f7ff;
@@ -1214,13 +1238,17 @@
         </tr>
         <!-- FOOTER -->
         <tr>
-          <td style="padding: 10px 10px 20px 10px; line-height: 18px">
+          <td
+            class="footer"
+            style="padding: 10px 10px 20px 10px; line-height: 18px"
+          >
             You are receiving this email as part of your Infigrowth account. We
             strive to provide valuable insights, but if you’d like to make
             changes, you can
             <a class="bold-font" href="#" style="color: #000; font-weight: 600"
-              >Update your preferences anytime.</a
+              >Update your preferences</a
             >
+            anytime.
           </td>
         </tr>
       </table>
