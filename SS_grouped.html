@@ -78,18 +78,6 @@
         .support {
           padding: 20px 0 !important;
         }
-
-        /* Overview card header */
-        .overview-left,
-        .overview-right {
-          display: table-cell !important;
-          vertical-align: middle !important;
-        }
-
-        .overview-left {
-          width: 0 !important;
-          padding-right: 8px;
-        }
       }
 
       /* MEDIA QUERY : DESKTOP */
@@ -350,132 +338,130 @@
                     <tr>
                       <td
                         class="card-header"
-                        style="background-color: #eaf6ff; padding: 8px 14px"
+                        style="
+                          background-color: #eaf6ff;
+                          padding: 11px 14px 5px 14px;
+                          font-size: 0;
+                        "
                       >
-                        <table width="100%" style="border-spacing: 0">
-                          <tr>
-                            <!-- Left: Icon + Title -->
-                            <td
-                              style="
-                                width: 100%;
-                                display: block;
-                                padding-bottom: 12px;
-                              "
-                              class="overview-left"
-                            >
-                              <table
-                                cellpadding="0"
-                                cellspacing="0"
-                                style="border-spacing: 0"
-                              >
-                                <tr>
-                                  <td
-                                    class="overview-card-image"
-                                    style="
-                                      padding-right: 5px;
-                                      vertical-align: middle;
-                                    "
-                                  >
-                                    <img
-                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744366015/flashlight-line_x28ru5.png"
-                                      width="20"
-                                      height="20"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                  <td
-                                    class="bold-font"
-                                    style="
-                                      font-weight: 600;
-                                      font-size: 16px;
-                                      color: #000;
-                                      vertical-align: middle;
-                                      white-space: nowrap !important;
-                                    "
-                                  >
-                                    Overview of Alerts for Project :
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-
-                            <!-- Right: Pill -->
-                            <td
-                              style="width: 100%; display: block"
-                              class="overview-right"
-                            >
-                              <table
-                                cellpadding="0"
-                                cellspacing="0"
+                        <!-- LEFT CONTENT -->
+                        <span
+                          style="
+                            display: inline-block;
+                            vertical-align: middle;
+                            max-width: 100%;
+                            font-size: 14px;
+                            padding-bottom: 10px;
+                            padding-right: 10px;
+                          "
+                        >
+                          <table
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                          >
+                            <tr>
+                              <td
                                 style="
-                                  display: inline-block;
-                                  border: 2px solid;
-                                  border-radius: 4px;
-                                  background-color: #fff;
-                                  padding: 6px 10px;
+                                  padding-right: 5px;
+                                  vertical-align: middle;
                                 "
                               >
-                                <tr>
-                                  <td
-                                    style="padding-right: 5px"
-                                    valign="middle"
-                                  >
-                                    <img
-                                      height="20"
-                                      width="20"
-                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/google_1_1_s5svny.png"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                  <td
-                                    style="padding-right: 5px"
-                                    valign="middle"
-                                  >
-                                    <img
-                                      height="18"
-                                      width="21"
-                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/Flag_hdseof.png"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                  <td
-                                    style="
-                                      padding-right: 10px;
-                                      border-right: 2px solid #e2e8f0;
-                                      font-weight: 600;
-                                      font-size: 14px;
-                                      color: #000;
-                                      padding-left: 5px;
-                                      white-space: nowrap;
-                                    "
-                                    valign="middle"
-                                  >
-                                    India
-                                  </td>
-                                  <td style="padding: 0 8px" valign="middle">
-                                    <img
-                                      height="20"
-                                      width="20"
-                                      src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/FirstAddon_1_ljd1fz.png"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                  <td
-                                    style="
-                                      font-weight: 600;
-                                      font-size: 14px;
-                                      color: #000;
-                                      white-space: nowrap;
-                                    "
-                                    valign="middle"
-                                  >
-                                    Desktop
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
+                                <img
+                                  src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1744366015/flashlight-line_x28ru5.png"
+                                  width="20"
+                                  height="20"
+                                  style="display: block"
+                                />
+                              </td>
+                              <td
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  color: #000;
+                                  vertical-align: middle;
+                                  white-space: nowrap;
+                                "
+                              >
+                                Overview of Alerts for Campaign :
+                              </td>
+                            </tr>
+                          </table>
+                        </span>
+
+                        <!-- RIGHT CONTENT -->
+                        <span
+                          style="
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 14px;
+                            padding-bottom: 10px;
+                          "
+                        >
+                          <table
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                            style="
+                              border: 2px solid #000;
+                              border-radius: 4px;
+                              background-color: #fff;
+                              padding: 6px 10px;
+                            "
+                          >
+                            <tr>
+                              <td style="padding-right: 5px" valign="middle">
+                                <img
+                                  height="20"
+                                  width="20"
+                                  src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/google_1_1_s5svny.png"
+                                  style="display: block"
+                                />
+                              </td>
+                              <td style="padding-right: 5px" valign="middle">
+                                <img
+                                  height="18"
+                                  width="21"
+                                  src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/Flag_hdseof.png"
+                                  style="display: block"
+                                />
+                              </td>
+                              <td
+                                style="
+                                  padding-right: 10px;
+                                  border-right: 2px solid #e2e8f0;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                  color: #000;
+                                  padding-left: 5px;
+                                  white-space: nowrap;
+                                "
+                                valign="middle"
+                              >
+                                America
+                              </td>
+                              <td style="padding: 0 8px" valign="middle">
+                                <img
+                                  height="20"
+                                  width="20"
+                                  src="https://res.cloudinary.com/dpwevdzrq/image/upload/v1745567065/FirstAddon_1_ljd1fz.png"
+                                  style="display: block"
+                                />
+                              </td>
+                              <td
+                                style="
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                  color: #000;
+                                  white-space: nowrap;
+                                "
+                                valign="middle"
+                              >
+                                Desktop
+                              </td>
+                            </tr>
+                          </table>
+                        </span>
                       </td>
                     </tr>
                     <!-- CARD MAIN  -->
